@@ -1,0 +1,142 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier/react",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "react",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]}
+    }
+  },
+  "rules": {
+    // Possible Errors
+    "no-console": "off",
+    "no-unexpected-multiline": "warn",
+
+    // Best Practices
+    "class-methods-use-this": "off",
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
+    "dot-location": ["error", "property"],
+    "eqeqeq": "error",
+    "no-implicit-globals": "error",
+    "no-invalid-this": "error",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-unmodified-loop-condition": "error",
+    "no-useless-call": "error",
+    "no-void": "off",
+    "no-else-return": "off", // for type refinements
+
+    "no-catch-shadow": "error",
+    "no-label-var": "error",
+    "no-shadow": [
+      "error",
+      { "allow": ["cb", "next", "req", "res", "err", "error"] }
+    ],
+    "no-undef-init": "error",
+    "no-undefined": "error",
+    "no-use-before-define": ["error", "nofunc"],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "prefer-const": ["error", {
+      "destructuring": "all"
+    }],
+
+    // Node.js
+    "callback-return": "error",
+    "no-path-concat": "error",
+
+    // Stylistic Issues
+    "linebreak-style": ["error", "unix"],
+    "no-nested-ternary": "error",
+    "no-plusplus": "off",
+
+    // ES2015
+    "constructor-super": "error",
+    "generator-star-spacing": ["error", "after"],
+    "no-duplicate-imports": "error",
+    "no-this-before-super": "error",
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "prefer-spread": "error",
+    "prefer-template": "off",
+
+    // React
+    "react/jsx-boolean-value": "error",
+    "react/jsx-curly-brace-presence": "error",
+    "react/no-danger": "error",
+    "react/no-deprecated": "error",
+    "react/no-did-mount-set-state": "error",
+    "react/no-did-update-set-state": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-is-mounted": "error",
+    "react/no-set-state": "error",
+    "react/no-string-refs": "error",
+    "react/prefer-stateless-function": "error",
+    "react/prop-types": "off",
+    "react/self-closing-comp": "off",
+    "react/destructuring-assignment": "off",
+
+    // React Hooks
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+
+    // jsx
+    "jsx-quotes": ["error", "prefer-double"],
+
+    // a11y
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/no-autofocus": "off",
+
+    // import
+    "import/no-cycle": "error",
+    "import/no-unresolved": "error",
+
+    "@typescript-eslint/ban-ts-ignore": ["off"],
+    "@typescript-eslint/ban-types": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/prefer-interface": ["off"],
+    "@typescript-eslint/indent": ["off"],
+    "@typescript-eslint/no-object-literal": ["off"],
+    "@typescript-eslint/no-object-literal-type-assertion": ["off"],
+    "@typescript-eslint/camelcase": ["off"],
+    "@typescript-eslint/explicit-function-return-type": ["off"],
+    "@typescript-eslint/no-use-before-define": ["off"],
+    "@typescript-eslint/explicit-member-accessibility": ["off"],
+    "@typescript-eslint/array-type": ["off"],
+    "@typescript-eslint/member-delimiter-style": ["off"],
+    "@typescript-eslint/no-var-requires": ["off"],
+    // Use no-unused-locals on tsc
+    "@typescript-eslint/no-unused-vars": ["off"]
+  }
+}
